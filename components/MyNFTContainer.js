@@ -25,7 +25,7 @@ const MyNFTContainer = ({ nft }) => {
           <div className="absolute top-0 left-0  bg-white/40  backdrop-blur-xl w-full h-full z-[20] rounded-2xl opacity-0 hover:opacity-100">
             <div className="flex items-center justify-center h-full ">
               <button
-                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl font-body cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto "
+                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto "
                 onClick={() => {
                   router.push({
                     pathname: "/nft-details",

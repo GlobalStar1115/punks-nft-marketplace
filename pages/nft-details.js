@@ -78,7 +78,7 @@ const NFTDetails = () => {
       <Header />
       <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full "></div>
       <div className="relative overflow-hidden">
-        <section className="grid grid-cols-2 max-w-[1240px] mx-auto my-2 gap-4 font-body sm:grid-cols-1 p-5">
+        <section className="grid grid-cols-2 max-w-[1240px] mx-auto my-2 gap-4  sm:grid-cols-1 p-5">
           <div className="p-3 sm:p-0">
             <div className="w-full h-[508px] border border-solid border-sky-500   rounded-xl ">
               <img
@@ -119,7 +119,7 @@ const NFTDetails = () => {
             </div>
 
             <button
-              className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl font-body cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-auto mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
+              className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-auto mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
               onClick={() => {
                 addr === nft.owner.toLocaleLowerCase()
                   ? sellNFT(nft)

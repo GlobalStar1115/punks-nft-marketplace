@@ -50,7 +50,7 @@ export default function Home() {
 
       <div className="relative overflow-hidden">
         {/* HeroSection */}
-        <section className="max-w-[1240px] my-20 mx-auto grid grid-cols-2  gap-2 font-body h-[540px] overflow-hidden top-7 md:gap-12 medium md:px-5 sm:grid-cols-1 sm:h-full relative ">
+        <section className="max-w-[1240px] my-20 mx-auto grid grid-cols-2  gap-2  h-[540px] overflow-hidden top-7 md:gap-12 medium md:px-5 sm:grid-cols-1 sm:h-full relative ">
           <div className="flex flex-col items-start justify-center h-full sm:items-center">
             <h1 className="w-full text-4xl sm:text-center">
               Discover New Era of <br /> Crypto Currencies
@@ -63,7 +63,7 @@ export default function Home() {
             {addr ? (
               <button
                 type="button"
-                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl font-body cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto focus:scale-90"
+                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto focus:scale-90"
                 onClick={connectWallet}
               >
                 Create an NFT
@@ -71,7 +71,7 @@ export default function Home() {
             ) : (
               <button
                 type="button"
-                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl font-body cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-full mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
+                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-full mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
                 onClick={connectWallet}
               >
                 Connect Wallet
@@ -111,7 +111,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="max-w-[1240px] my-20 mx-auto  gap-2 font-body top-7 ">
+        <section className="max-w-[1240px] my-20 mx-auto  gap-2  top-7 ">
           <h1 className="text-center w-full">Create and sell your NFTs</h1>
 
           <div className="grid grid-cols-3 gap-5 sm:grid-cols-1 sm:p-12 md:grid-cols-1 md:mx-10">
@@ -138,7 +138,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="max-w-[1240px] my-20 mx-auto  gap-2 font-body top-7 ">
+        <section className="max-w-[1240px] my-20 mx-auto  gap-2  top-7 ">
           <h2 className="sm:text-center md:mx-10">Featured Artist </h2>
           <div className="grid grid-cols-4 gap-3 sm:gap-y-8 md:grid-cols-2 sm:grid-cols-1 sm:p-12 md:mx-10">
             {mockartist.map((data) => (
@@ -170,7 +170,7 @@ export default function Home() {
         </section>
 
         {/* Community */}
-        <section className="max-w-[1240px] bg- my-20 mx-auto bg-[#272D37] gap-2 font-body top-7 text-center p-10 rounded-xl sm:mx-10 md:m-10 border border-solid border-sky-600">
+        <section className="max-w-[1240px] bg- my-20 mx-auto bg-[#272D37] gap-2  top-7 text-center p-10 rounded-xl sm:mx-10 md:m-10 border border-solid border-sky-600">
           <div>
             <h1 className="text-4xl sm:text-2xl">Create Your Own NFT!</h1>
             <p className="text-[#ADB9C7] px-[120px] sm:p-2 ms:p-1">
@@ -178,7 +178,7 @@ export default function Home() {
               Join us to get the news as soon as possible and follow our latest
               announcements!
             </p>
-            <button className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl font-body cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto  ">
+            <button className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto  ">
               Join Community Now
             </button>
           </div>

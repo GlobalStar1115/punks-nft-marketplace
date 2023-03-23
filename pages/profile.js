@@ -77,13 +77,13 @@ const Profile = () => {
       </Head>
       <Header />
 
-      <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full font-body"></div>
+      <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full "></div>
 
       <div className="relative overflow-hidden">
         <section className="">
           <div className="max-w-[1400px] relative h-[280px] mx-auto my-0 bg-[#272D37]/60 rounded-2xl border-3 border-solid border-[#0039FF] sm:h-[150px] md:mx-2 ">
             <div className="flex items-center justify-center w-full h-full">
-              <h1 className=" font-body font-semibold text-5xl md:text-2xl">
+              <h1 className="  font-semibold text-5xl md:text-2xl">
                 My NFTs
               </h1>
             </div>
@@ -97,7 +97,7 @@ const Profile = () => {
             </div>
           </div>
         </section>
-        <section className="max-w-[1200px] my-20 mx-auto grid grid-cols-3 md:grid-cols-2 gap-4 font-body  overflow-hidden top-7 md:gap-5 medium md:px-5 sm:grid-cols-1 sm:h-full relative justify-center items-center">
+        <section className="max-w-[1200px] my-20 mx-auto grid grid-cols-3 md:grid-cols-2 gap-4   overflow-hidden top-7 md:gap-5 medium md:px-5 sm:grid-cols-1 sm:h-full relative justify-center items-center">
           {nfts?.map((nft, i) => (
             <MyNFTContainer key={nft.tokenId} nft={nft} />
           ))}

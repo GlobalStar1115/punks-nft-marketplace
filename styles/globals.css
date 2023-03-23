@@ -2,14 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+/* acme-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Acme';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/acme-v21-latin-regular.eot');
+  src: url('./fonts/acme-v21-latin-regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/acme-v21-latin-regular.woff2') format('woff2'),
+    url('./fonts/acme-v21-latin-regular.woff') format('woff'),
+    url('./fonts/acme-v21-latin-regular.ttf') format('truetype'),
+    url('./fonts/acme-v21-latin-regular.svg#Acme') format('svg');
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Acme', Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -26,6 +37,7 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
@@ -59,13 +71,13 @@ a {
   padding-inline-start: 0;
 }
 
-.tx{
+.tx {
   resize: none;
   overflow: hidden;
 }
 
-.tx::-webkit-scrollbar { 
-  display: none; 
+.tx::-webkit-scrollbar {
+  display: none;
 }
 
 .profile {

@@ -54,7 +54,7 @@ const Create = () => {
   };
 
   return (
-    <div className="font-body">
+    <div className="">
       <Head>
         <title>Create NFT || Mumbai Punks </title>
         <link rel="shortcut icon" href="punks.png" />
@@ -65,7 +65,7 @@ const Create = () => {
       <h1 className="text-center">Mumbai Punks Create NFT</h1>
 
       <div className="relative overflow-hidden">
-        <section className="max-w-[1024px] my-20 mx-auto grid grid-cols-2  gap-10 font-body  overflow-hidden top-7 md:gap-10 medium md:px-5 sm:grid-cols-1 sm:h-full relative ">
+        <section className="max-w-[1024px] my-20 mx-auto grid grid-cols-2  gap-10   overflow-hidden top-7 md:gap-10 medium md:px-5 sm:grid-cols-1 sm:h-full relative ">
           
           <div className="flex flex-col">
             <label className="text-2xl my-1 font-semibold">Amount</label>
@@ -73,7 +73,7 @@ const Create = () => {
               type="number"
               placeholder="Input amount as you want to mint MPNK"
               className="px-5 py-3 rounded-xl
-              placeholder:text-slate-400 outline-none border-none  bg-[#272D37]/60 placeholder:font-body font-body"
+              placeholder:text-slate-400 outline-none border-none  bg-[#272D37]/60 placeholder: "
               value={nftDetails.amount}
               onChange={(e) =>
                 setNftDetails({ ...nftDetails, amount: e.target.value })
@@ -82,7 +82,7 @@ const Create = () => {
           </div>
           <button
             type="button"
-            className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl font-body cursor-pointer transition duration-250 ease-in-out  hover:drop-shadow-xl hover:shadow-sky-600 w-auto focus:scale-90"
+            className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out  hover:drop-shadow-xl hover:shadow-sky-600 w-auto focus:scale-90"
             onClick={mintNFTs}
             disabled={loading}
           >

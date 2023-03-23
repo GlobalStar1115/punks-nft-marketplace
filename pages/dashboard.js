@@ -65,7 +65,7 @@ const Dashboard = () => {
 
   if (!loading)
     return (
-      <div className="w-full h-screen flex flex-col items-center justify-center font-body">
+      <div className="w-full h-screen flex flex-col items-center justify-center ">
         <img src="/punks.png" alt="punks" className="h-[160px] animate-bounce" />
         <h2 className="text-7xl font-semibold ">Loading...</h2>
       </div>
@@ -81,13 +81,13 @@ const Dashboard = () => {
       <Header />
       <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full "></div>
       {!nfts.length ? (
-        <div className="w-full h-50 flex flex-col items-center justify-center font-body">
+        <div className="w-full h-50 flex flex-col items-center justify-center ">
           <h2 className="text-7xl font-semibold">No NFTs in Marketplace</h2>
         </div>
       ) : (
         <div className="relative overflow-hidden">
           <h1 className="text-center">Hot NFTs</h1>
-          <section className="max-w-[1200px] my-20 mx-auto grid grid-cols-3 md:grid-cols-2 gap-4 font-body  overflow-hidden top-7 md:gap-5 medium md:px-5 sm:grid-cols-1 sm:h-full relative justify-center items-center ">
+          <section className="max-w-[1200px] my-20 mx-auto grid grid-cols-3 md:grid-cols-2 gap-4   overflow-hidden top-7 md:gap-5 medium md:px-5 sm:grid-cols-1 sm:h-full relative justify-center items-center ">
             {nfts?.map((nft, i) => (
               <div key={i} className="w-full h-[536px] sm:h-full ssm:h-max">
                 <div
@@ -108,7 +108,7 @@ const Dashboard = () => {
                     <div className="absolute top-0 left-0  bg-white/40  backdrop-blur-xl w-full h-full z-[20] rounded-2xl opacity-0 hover:opacity-100">
                       <div className="flex items-center justify-center h-full ">
                         <button
-                          className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl font-body cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto "
+                          className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto "
                           onClick={() => {
                             router.push({
                               pathname: "/nft-details",

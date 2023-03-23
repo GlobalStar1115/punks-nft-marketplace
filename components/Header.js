@@ -35,17 +35,16 @@ const Header = () => {
   return (
     <>
       <section
-        className={` ${
-          isOpen
-            ? `sticky top-0 z-[100] w-full px-2 py-2 sm:px-4 transition duration-250 ease-in-out left-[0] `
-            : `sticky top-0 z-[100] w-full px-2 py-2 sm:px-4 transition duration-250 ease-in-out left-[-100%]`
-        }`}
+        className={` ${isOpen
+            ? `max-w-[1240px] mx-auto sticky top-0 z-[100] w-full py-2 sm:px-4 transition duration-250 ease-in-out left-[0] `
+            : `max-w-[1240px] mx-auto sticky top-0 z-[100] w-full py-2 sm:px-4 transition duration-250 ease-in-out left-[-100%]`
+          }`}
       >
         <nav
           className={
             hasScrolled
-              ? `rounded-lg px-6 font-body flex items-center justify-between max-w-[1240px] my-2 mx-auto h-16 md:px-4 md:mx-5 backdrop-blur-sm bg-[#000000]/40 sm:px-1 ssm:p-1 transition duration-250 ease-in-out border border-solid border-sky-600`
-              : `rounded-lg px-6 font-body flex items-center justify-between max-w-[1440px] my-2 mx-auto h-16 md:px-4 md:mx-5 sm:px-1 ssm:p-1 transition duration-250 ease-in-out`
+              ? `rounded-lg px-6  flex items-center justify-between max-w-[1240px] my-2 mx-auto h-16 md:px-4 md:mx-5 backdrop-blur-sm bg-[#000000]/10 sm:px-1 ssm:p-1 transition duration-250 ease-in-out border border-solid border-sky-600`
+              : `rounded-lg px-6  flex items-center justify-between max-w-[1440px] my-2 mx-auto h-16 md:px-4 md:mx-5 sm:px-1 ssm:p-1 transition duration-250 ease-in-out`
           }
         >
           <h2 className="text-2xl ssm:text-[10px]">
@@ -53,14 +52,14 @@ const Header = () => {
               <a>Mumbai Punks</a>
             </Link>
           </h2>
-          <ul className="flex gap-3 items-center justify-center transition-all list-none sm:hidden">
+          <ul className="flex gap-20 items-center justify-center transition-all list-none sm:hidden">
             <li>
               <Link href="/dashboard">
                 <a
                   className={
                     currentRoute === "/dashboard"
-                      ? "text-white text-base font-medium"
-                      : "text-gray-500 font-normal hover:text-white"
+                      ? "text-white text-2xl font-medium"
+                      : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
                   }
                 >
                   Home
@@ -72,8 +71,8 @@ const Header = () => {
                 <a
                   className={
                     currentRoute === "/createnft"
-                      ? "text-white text-base font-medium"
-                      : "text-gray-500 font-normal hover:text-white"
+                      ? "text-white text-2xl font-medium"
+                      : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
                   }
                 >
                   Create NFTs
@@ -85,8 +84,8 @@ const Header = () => {
                 <a
                   className={
                     currentRoute === "/profile"
-                      ? "text-white text-base font-medium"
-                      : "text-gray-500 font-normal hover:text-white"
+                      ? "text-white text-2xl font-medium"
+                      : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
                   }
                 >
                   Profile
@@ -95,7 +94,7 @@ const Header = () => {
             </li>
           </ul>
 
-          <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-800 sm:hidden">
+          <p className="font-semibold border-solid border-2 border-indigo-600 rounded-full px-6 py-1 text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-800 sm:hidden">
             {truncateEthAddress(addr)}
           </p>
 
@@ -106,11 +105,10 @@ const Header = () => {
       </section>
 
       <section
-        className={`${
-          isOpen
-            ? `block fixed h-screen z-[999] w-screen  backdrop-blur-lg bg-[#000000]/60  top-0 left-0 transition-all font-body`
+        className={`${isOpen
+            ? `block fixed h-screen z-[999] w-screen  backdrop-blur-lg bg-[#000000]/60  top-0 left-0 transition-all `
             : `hidden`
-        }`}
+          }`}
       >
         <div className="grid items-center justify-center h-screen grid-rows-3 text-center">
           <CloseSquare
@@ -132,7 +130,7 @@ const Header = () => {
                   className={
                     currentRoute === "/dashboard"
                       ? "text-white text-base font-medium"
-                      : "text-gray-500 font-normal hover:text-white"
+                      : "text-indigo-600 font-normal hover:text-white"
                   }
                 >
                   Home
@@ -145,7 +143,7 @@ const Header = () => {
                   className={
                     currentRoute === "/createnft"
                       ? "text-white text-base font-medium"
-                      : "text-gray-500 font-normal hover:text-white"
+                      : "text-indigo-600 font-normal hover:text-white"
                   }
                 >
                   Create NFTs
@@ -158,7 +156,7 @@ const Header = () => {
                   className={
                     currentRoute === "/profile"
                       ? "text-white text-base font-medium"
-                      : "text-gray-500 font-normal hover:text-white"
+                      : "text-indigo-600 font-normal hover:text-white"
                   }
                 >
                   Profile

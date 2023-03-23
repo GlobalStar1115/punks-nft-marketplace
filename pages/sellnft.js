@@ -100,7 +100,7 @@ const SellNft = () => {
                 type="number"
                 placeholder="Input your price as you want to sell"
                 className="px-5 py-3 rounded-xl
-               placeholder:text-slate-400 outline-none border-none  bg-[#272D37]/60 placeholder:font-body font-body"
+               placeholder:text-slate-400 outline-none border-none  bg-[#272D37]/60 placeholder: "
                 value={formData.price}
                 onChange={(e) =>
                   setFormData({ ...formData, price: e.target.value })
@@ -108,7 +108,7 @@ const SellNft = () => {
               />
             </div>
             <button
-              className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl font-body cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-full mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
+              className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-full mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
               onClick={sellToken}
               disabled={btnLoading}
             >
