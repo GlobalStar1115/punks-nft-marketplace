@@ -1,3 +1,12 @@
+### Stack
+
+- Frontend : [Next Js](https://nextjs.org/)
+- Smart Contract Lang : [Solidity](https://docs.soliditylang.org/en/v0.8.17/)
+- Dev Environment for ETH Software: [Hardhat](https://hardhat.org/)
+- Network : [Polygon  Mumbai](https://polygon.technology/)
+- Fonts - [Google Fonts](https://fonts.google.com/)
+- Style : [Tailwind CSS](https://tailwindcss.com/)
+- Toast: [React Toastify](https://fkhadra.github.io/react-toastify/introduction/)
 
 ##### Setup
 

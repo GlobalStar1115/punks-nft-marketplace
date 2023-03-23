@@ -7,6 +7,7 @@ import axios from "axios";
 import { ethers } from "ethers";
 import { truncateEthAddress } from "../utils/truncAddress";
 import { useRouter } from "next/router";
+import { headers } from "../next.config";
 
 const Dashboard = () => {
   const [nfts, setNts] = useState([]);

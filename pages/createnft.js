@@ -34,10 +34,11 @@ const Create = () => {
       const contract = await getContract();
 
       let mintPrice = await contract.getMintPrice();
-      mintPrice = mintPrice.toString();
+      let totalPrice = mintPrice * amount;
+      totalPrice = totalPrice.toString();
 
       let transaction = await contract.createToken( amount , {
-        value: mintPrice,
+        value: totalPrice,
       });
       await transaction.wait();
 

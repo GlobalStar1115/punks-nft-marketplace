@@ -6,6 +6,7 @@ import { Footer, Header, MyNFTContainer } from "../components";
 import ContractABI from "../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json";
 import { ethers } from "ethers";
 import axios from "axios";
+import cors from "cors";
 import { truncateEthAddress } from "../utils/truncAddress";
 
 const Profile = () => {
@@ -40,8 +41,6 @@ const Profile = () => {
       const items = await Promise.all(
         data?.map(async (i) => {
           const tokenURI = await contract.tokenURI(i.tokenId);
-
-          const token = "";
 
           const meta = await axios.get(tokenURI);
 
