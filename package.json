@@ -1,0 +1,47 @@
+{
+  "name": "08-nftmarketplace-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@bundlr-network/client": "^0.7.8",
+    "@openzeppelin/contracts": "^4.7.3",
+    "axios": "^1.0.0",
+    "bignumber.js": "^9.1.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.1",
+    "iconsax-react": "^0.0.8",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-toastify": "^9.0.8"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomicfoundation/hardhat-toolbox": "2.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^9.1.1",
+    "autoprefixer": "^10.4.12",
+    "chai": "^4.3.7",
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "hardhat": "2.11.1",
+    "hardhat-gas-reporter": "^1.0.9",
+    "postcss": "^8.4.17",
+    "solidity-coverage": "^0.8.2",
+    "tailwindcss": "^3.1.8",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1",
+    "typescript": "^5.0.2"
+  }
+}
