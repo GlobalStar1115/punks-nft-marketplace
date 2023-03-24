@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* acme-regular - latin */
 @font-face {
   font-display: swap;
   font-family: 'Acme';
@@ -82,4 +81,24 @@ a {
 
 .profile {
   background: linear-gradient(138.18deg, #216CFD -7.24%, #002ECF 105.61%);
+}
+
+.main-color {
+  color: #4f46e5;
+}
+
+.second-color {
+  color: hwb(0 0% 100% / 0.6);
+}
+
+.main-family {
+  font-family: 'Acme', Arial, Helvetica, sans-serif;
+}
+
+.main-card-bg {
+  background-color: #bbbbbb99;
+}
+
+.main-btn-bg {
+  background: #4f46e5;
 }

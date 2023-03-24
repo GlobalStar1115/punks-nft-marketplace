@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { truncateEthAddress } from "../utils/truncAddress";
-
+// import siteLogo from "../public/logos/black_logo.svg"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -49,16 +49,17 @@ const Header = () => {
         >
           <h2 className="text-2xl ssm:text-[10px]">
             <Link href="/">
-              <a>Mumbai Punks</a>
+              {/* <a>Mumbai Punks</a> */}
+              <img height="60px" src="logos/black_logo.svg" alt="logo" />
             </Link>
           </h2>
-          <ul className="flex gap-20 items-center justify-center transition-all list-none sm:hidden">
+          <ul className="flex gap-12 items-center justify-center transition-all list-none sm:hidden">
             <li>
               <Link href="/dashboard">
                 <a
                   className={
                     currentRoute === "/dashboard"
-                      ? "text-white text-2xl font-medium"
+                      ? "text-gray-900 text-2xl font-medium"
                       : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
                   }
                 >
@@ -71,7 +72,7 @@ const Header = () => {
                 <a
                   className={
                     currentRoute === "/createnft"
-                      ? "text-white text-2xl font-medium"
+                      ? "text-gray-900 text-2xl font-medium"
                       : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
                   }
                 >
@@ -84,7 +85,7 @@ const Header = () => {
                 <a
                   className={
                     currentRoute === "/profile"
-                      ? "text-white text-2xl font-medium"
+                      ? "text-gray-900 text-2xl font-medium"
                       : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
                   }
                 >

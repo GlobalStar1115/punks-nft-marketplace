@@ -51,11 +51,11 @@ export default function Home() {
       <div className="relative overflow-hidden">
         {/* HeroSection */}
         <section className="max-w-[1240px] my-20 mx-auto grid grid-cols-2  gap-2  h-[540px] overflow-hidden top-7 md:gap-12 medium md:px-5 sm:grid-cols-1 sm:h-full relative ">
-          <div className="flex flex-col items-start justify-center h-full sm:items-center">
-            <h1 className="w-full text-4xl sm:text-center">
+          <div className="flex flex-col items-start h-full sm:items-center">
+            <h1 className="w-full text-6xl sm:text-center main-color">
               Discover New Era of <br /> Crypto Currencies
             </h1>
-            <p className="text-[#ADB9C7] sm:text-center">
+            <p className="second-color text-2xl sm:text-center">
               Mumbai Punks is the primier marketplace for NFT, which are digital items
               you can truly own. Digital items have existed for a long time, but
               never like this.
@@ -63,7 +63,7 @@ export default function Home() {
             {addr ? (
               <button
                 type="button"
-                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto focus:scale-90"
+                className="main-btn-bg main-family text-lg text-white outline-none border-none py-2 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out hover:drop-shadow-xl hover:shadow-sky-600 w-auto focus:scale-90"
                 onClick={connectWallet}
               >
                 Create an NFT
@@ -71,15 +71,15 @@ export default function Home() {
             ) : (
               <button
                 type="button"
-                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-full mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
+                className="main-btn-bg outline-none border-none py-3 px-5 rounded-xl  cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-full mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
                 onClick={connectWallet}
               >
                 Connect Wallet
               </button>
             )}
           </div>
-          <div className="w-full flex items-center justify-center">
-            <div className="w-[400px] h-[536px] bg-[#272D37]/60 rounded-2xl flex flex-col p-6 sm:h-max">
+          <div className="w-full flex items-center justify-end">
+            <div className="w-[400px] h-[536px] main-card-bg rounded-2xl flex flex-col p-6 sm:h-max">
               <Image
                 src="/images/mock.png"
                 alt="mock"
@@ -88,7 +88,7 @@ export default function Home() {
                 layout="intrinsic"
               ></Image>
               <div className="">
-                <h1>Hamlet</h1>
+                <h1 className="main-color">Hamlet</h1>
                 <div className="h-[56px] flex justify-between">
                   <div className="flex flex-row gap-2">
                     <img
@@ -97,13 +97,13 @@ export default function Home() {
                       className="h-[56px] w-[56px] rounded-xl"
                     />
                     <div>
-                      <p className="my-1 text-base text-[#8F9CA9]">Creator </p>
-                      <h4 className="my-0">0x000...0000</h4>
+                      <p className="my-1 text-base second-color">Creator </p>
+                      <h4 className="my-0 main-color">0x000...0000</h4>
                     </div>
                   </div>
                   <div>
-                    <p className="my-1 text-[#8F9CA9]">Current Price</p>
-                    <h4 className="my-0 ">4.99 ETH</h4>
+                    <p className="my-1 second-color">Current Price</p>
+                    <h4 className="my-0 main-color">4.99 ETH</h4>
                   </div>
                 </div>
               </div>
@@ -112,25 +112,25 @@ export default function Home() {
         </section>
 
         <section className="max-w-[1240px] my-20 mx-auto  gap-2  top-7 ">
-          <h1 className="text-center w-full">Create and sell your NFTs</h1>
+          <h1 className="text-center w-full main-color text-4xl">Create and sell your NFTs</h1>
 
-          <div className="grid grid-cols-3 gap-5 sm:grid-cols-1 sm:p-12 md:grid-cols-1 md:mx-10">
+          <div className="grid grid-cols-3 gap-20 sm:grid-cols-1 sm:p-12 md:grid-cols-1 md:mx-10">
             {data.map((item) => (
               <div
                 key={item.id}
-                className="w-full bg-[#272D37] flex flex-col justify-center items-center p-3 rounded-xl"
+                className="w-full main-card-bg flex flex-col justify-center items-center px-6 py-3 rounded-xl"
               >
                 <div className="w-[80px] h-[80px] flex  justify-center items-center ">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full"
+                    className="h-full"
                   />
                 </div>
-                <h4 className="font-bold text-[24px] md:text-[14px]">
+                <h4 className="font-bold main-color text-2xl md:text-[14px]">
                   {item.title}
                 </h4>
-                <p className="text-center text-[#ADB9C7] text-[14px]">
+                <p className="text-center second-color text-lg">
                   {item.description}
                 </p>
               </div>
@@ -139,12 +139,12 @@ export default function Home() {
         </section>
 
         <section className="max-w-[1240px] my-20 mx-auto  gap-2  top-7 ">
-          <h2 className="sm:text-center md:mx-10">Featured Artist </h2>
-          <div className="grid grid-cols-4 gap-3 sm:gap-y-8 md:grid-cols-2 sm:grid-cols-1 sm:p-12 md:mx-10">
+          <h2 className="main-color text-4xl text-center sm:text-center md:mx-10">Featured Artist </h2>
+          <div className="grid grid-cols-4 gap-6 sm:gap-y-8 md:grid-cols-2 sm:grid-cols-1 sm:p-12 md:mx-10">
             {mockartist.map((data) => (
               <div
                 key={data.id}
-                className="w-full bg-[#272D37] flex flex-col justify-center items-center p-3 rounded-xl"
+                className="w-full main-card-bg flex flex-col justify-center items-center p-3 rounded-xl"
               >
                 <div className="w-full relative">
                   <img
@@ -161,8 +161,8 @@ export default function Home() {
                   />
                 </div>
                 <div className="w-full text-center mt-8 font-bold">
-                  <h3>{data.name}</h3>
-                  <p>Price: {data.price}</p>
+                  <h3 className="second-color">{data.name}</h3>
+                  <p className="main-color text-2xl mb-0">{data.price}</p>
                 </div>
               </div>
             ))}
@@ -170,15 +170,15 @@ export default function Home() {
         </section>
 
         {/* Community */}
-        <section className="max-w-[1240px] bg- my-20 mx-auto bg-[#272D37] gap-2  top-7 text-center p-10 rounded-xl sm:mx-10 md:m-10 border border-solid border-sky-600">
+        <section className="max-w-[1240px] bg- my-20 mx-auto main-card-bg gap-2  top-7 text-center p-10 rounded-xl sm:mx-10 md:m-10 border border-solid border-sky-600">
           <div>
-            <h1 className="text-4xl sm:text-2xl">Create Your Own NFT!</h1>
-            <p className="text-[#ADB9C7] px-[120px] sm:p-2 ms:p-1">
+            <h1 className="text-4xl main-color sm:text-2xl">Create Your Own NFT!</h1>
+            <p className="second-color text-2xl px-[120px] sm:p-2 ms:p-1">
               We have a large scale group to support each other in this game,
               Join us to get the news as soon as possible and follow our latest
               announcements!
             </p>
-            <button className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto  ">
+            <button className="main-btn-bg text-white main-family text-lg outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition ease-in-out hover:drop-shadow-xl hover:shadow-sky-600 w-auto  ">
               Join Community Now
             </button>
           </div>

@@ -10,31 +10,28 @@ const Footer = () => {
               <img src="punks.png" alt="Punks" className="w-[40px] h-[40px]" />
               <h4 className="">Mumbai Punks</h4>
             </div>
-            <p className="text-lg text-[#ADB9C7]">
+            <p className="text-lg second-color">
               The world’s first and largest digital marketplace for crypto
               collectibles and non-fungible tokens (NFTs). Buy, sell, and
               discover exclusive digital items.
             </p>
           </div>
           <div>
-            <h3 className="title">Resources</h3>
-            <p className="desc">Help Center</p>
-            <p className="desc">Platform Status</p>
-            <p className="desc">Partners</p>
-            <p className="desc">Gas-Free Marketplace</p>
-            <p className="desc">Blog</p>
+            <p className="second-color">Help Center</p>
+            <p className="second-color">Platform Status</p>
+            <p className="second-color">Partners</p>
+            <p className="second-color">Gas-Free Marketplace</p>
+            <p className="second-color">Blog</p>
           </div>
           <div>
-            <h3 className="title">Company</h3>
-            <p className="desc">Our Team</p>
-            <p className="desc">About Us</p>
-            <p className="desc">Partners</p>
-            <p className="desc">Contact Us</p>
-            <p className="desc">Career</p>
+            <p className="second-color">Our Team</p>
+            <p className="second-color">About Us</p>
+            <p className="second-color">Partners</p>
+            <p className="second-color">Contact Us</p>
+            <p className="second-color">Career</p>
           </div>
           <div>
-            <h3 className="title">Contact</h3>
-            <p className="desc">
+            <p className="second-color">
               2715 Ash Dr. San Jose, <br /> South Dakota 83475
             </p>
           </div>
@@ -45,7 +42,7 @@ const Footer = () => {
             Designed and Developed By{" "}
             <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">
               {" "}
-              Aakrut Dabhi{" "}
+              BigStarTeam{" "}
             </span>
           </p>
         </div>
