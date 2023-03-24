@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { truncateEthAddress } from "../utils/truncAddress";
-// import siteLogo from "../public/logos/black_logo.svg"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();

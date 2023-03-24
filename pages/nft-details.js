@@ -89,37 +89,35 @@ const NFTDetails = () => {
             </div>
           </div>
           <div className="">
-            <h1>
+            <h1 className="main-color ">
               {nft.name}
             </h1>
-            <p className="text-[#ADB9C7]"> {nft.description}</p>
+            <p className="second-color">Description: <span className="main-color"> {nft.description}</span> </p>
             <div>
-              <p>Price</p>
-              <h2>{nft.price} MATIC</h2>
+              <h2 className="second-color">Pirce: <span className="main-color">{nft.price} MATIC</span></h2>
             </div>
             <div>
-              <p>Owner </p>
-              <h2 className="my-0 ssm:text-sm text-transparent font-bold bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">
-                {truncateEthAddress(nft.owner)}
+              <h2 className="ssm:text-sm text-transparent font-bold second-color">Owner Address:
+                <span className="main-color"> {truncateEthAddress(nft.owner)}</span>
               </h2>
             </div>
 
             {nft.seller.startsWith("0x0") ? null : (
               <div>
-                <p>Seller </p>
-                <h2 className="my-0 ssm:text-sm text-transparent font-bold bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">
-                  {truncateEthAddress(nft.seller)}
+                <h2 className="ssm:text-sm text-transparent font-bold second-color">Seller:
+                  <span className="main-color"> {truncateEthAddress(nft.seller)}</span>
                 </h2>
               </div>
             )}
 
             <div>
-              <p>Blockchain</p>
-              <h2>Poygon ⟠</h2>
+              <h2 className="ssm:text-sm text-transparent font-bold second-color">Blockchain:
+                <span className="main-color"> Poygon ⟠</span>
+              </h2>
             </div>
 
             <button
-              className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-auto mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
+              className="main-btn-bg outline-none border-none py-2 px-10 rounded-xl text-white text-lg main-family  cursor-pointer  "
               onClick={() => {
                 addr === nft.owner.toLocaleLowerCase()
                   ? sellNFT(nft)

@@ -9,7 +9,7 @@ import { ethers } from "ethers";
 const Create = () => {
 
   const [nftDetails, setNftDetails] = useState({
-    amount:"1"
+    amount: "1"
   });
 
   const [loading, setLoading] = useState(false);
@@ -29,6 +29,8 @@ const Create = () => {
 
   const mintNFTs = async () => {
     try {
+      setLoading(true);
+      
       const { amount } = nftDetails;
 
       const contract = await getContract();
@@ -37,14 +39,14 @@ const Create = () => {
       let totalPrice = mintPrice * amount;
       totalPrice = totalPrice.toString();
 
-      let transaction = await contract.createToken( amount , {
+      let transaction = await contract.createToken(amount, {
         value: totalPrice,
       });
       await transaction.wait();
 
-      setLoading(false);
-
       toast.success("Minted Successfully");
+
+      setLoading(false);
 
     } catch (error) {
       console.error(error);
@@ -52,6 +54,15 @@ const Create = () => {
       setLoading(false);
     }
   };
+
+  // if (!loading)
+  //   return (
+  //     <div className="w-full h-screen flex flex-col items-center justify-center ">
+  //       <img src="/punks.png" alt="punks" className="h-[160px] animate-bounce" />
+  //       <h2 className="text-6xl main-color font-semibold ">Loading...</h2>
+  //     </div>
+  //   );
+
 
   return (
     <div className="">
@@ -66,7 +77,7 @@ const Create = () => {
 
       <div className="relative overflow-hidden">
         <section className="max-w-[1024px] my-20 mx-auto grid grid-cols-2  gap-10   overflow-hidden top-7 md:gap-10 medium md:px-5 sm:grid-cols-1 sm:h-full relative ">
-          
+
           <div className="flex flex-col">
             <label className="text-2xl my-1 font-semibold">Amount</label>
             <input
@@ -82,7 +93,7 @@ const Create = () => {
           </div>
           <button
             type="button"
-            className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out  hover:drop-shadow-xl hover:shadow-sky-600 w-auto focus:scale-90"
+            className="main-btn-bg text-white text-lg main-family outline-none border-none py-3 px-5 rounded-xl  cursor-pointer"
             onClick={mintNFTs}
             disabled={loading}
           >
