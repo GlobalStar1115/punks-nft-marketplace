@@ -44,7 +44,7 @@ export default function Home() {
         <link rel="shortcut icon" href="punks.png" />
       </Head>
 
-      <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full "></div>
+      <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full md:w-[300px] "></div>
 
       {isWalletConnected ||  addr ? <Header /> : null}
 
@@ -52,7 +52,7 @@ export default function Home() {
         {/* HeroSection */}
         <section className="max-w-[1240px] my-20 mx-auto grid grid-cols-2  gap-2  h-[540px] overflow-hidden top-7 md:gap-12 medium md:px-5 sm:grid-cols-1 sm:h-full relative ">
           <div className="flex flex-col items-start h-full sm:items-center">
-            <h1 className="w-full text-6xl sm:text-center main-color">
+            <h1 className="w-full text-6xl md:text-4xl sm:text-center main-color">
               Discover New Era of <br /> Crypto Currencies
             </h1>
             <p className="second-color text-2xl sm:text-center">
@@ -78,8 +78,8 @@ export default function Home() {
               </button>
             )}
           </div>
-          <div className="w-full flex items-center justify-end">
-            <div className="w-[400px] h-[536px] main-card-bg rounded-2xl flex flex-col p-6 sm:h-max">
+          <div className="w-full flex items-center justify-end md:items-start">
+            <div className="w-[400px] h-[536px] md:w-full md:h-[450px] main-card-bg rounded-2xl flex flex-col p-6 sm:h-max">
               <Image
                 src="/images/mock.png"
                 alt="mock"
@@ -114,7 +114,7 @@ export default function Home() {
         <section className="max-w-[1240px] my-20 mx-auto  gap-2  top-7 ">
           <h1 className="text-center w-full main-color text-4xl">Create and sell your NFTs</h1>
 
-          <div className="grid grid-cols-3 gap-20 sm:grid-cols-1 sm:p-12 md:grid-cols-1 md:mx-10">
+          <div className="grid grid-cols-3 gap-20 sm:grid-cols-1 sm:p-0 md:grid-cols-1 md:mx-10">
             {data.map((item) => (
               <div
                 key={item.id}
@@ -140,7 +140,7 @@ export default function Home() {
 
         <section className="max-w-[1240px] my-20 mx-auto  gap-2  top-7 ">
           <h2 className="main-color text-4xl text-center sm:text-center md:mx-10">Featured Artist </h2>
-          <div className="grid grid-cols-4 gap-6 sm:gap-y-8 md:grid-cols-2 sm:grid-cols-1 sm:p-12 md:mx-10">
+          <div className="grid grid-cols-4 gap-6 sm:gap-y-8 md:grid-cols-2 sm:grid-cols-1 sm:p-0 md:mx-10">
             {mockartist.map((data) => (
               <div
                 key={data.id}

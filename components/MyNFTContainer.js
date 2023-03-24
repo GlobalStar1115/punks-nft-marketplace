@@ -8,7 +8,7 @@ const MyNFTContainer = ({ nft }) => {
   return (
     <div key={nft.tokenId} className="w-full h-[536px] sm:h-full ssm:h-max">
       <div
-        className="w-full h-full ssm:h-max bg-[#272D37]/60 rounded-2xl flex flex-col p-6 sm:h-max cursor-pointer"
+        className="w-full h-full ssm:h-max main-card-bg rounded-2xl flex flex-col p-6 sm:h-max cursor-pointer"
         onClick={() => {
           router.push({
             pathname: "/nft-details",
@@ -25,7 +25,7 @@ const MyNFTContainer = ({ nft }) => {
           <div className="absolute top-0 left-0  bg-white/40  backdrop-blur-xl w-full h-full z-[20] rounded-2xl opacity-0 hover:opacity-100">
             <div className="flex items-center justify-center h-full ">
               <button
-                className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer transition duration-250 ease-in-out hover:scale-125 hover:drop-shadow-xl hover:shadow-sky-600 w-auto "
+                className="main-btn-bg text-white text-lg main-family outline-none border-none py-2 px-5 rounded-xl  cursor-pointer w-auto "
                 onClick={() => {
                   router.push({
                     pathname: "/nft-details",
@@ -39,19 +39,19 @@ const MyNFTContainer = ({ nft }) => {
           </div>
         </div>
         <div className="">
-          <h1>{nft.name}</h1>
+          <h1 className="main-color">{nft.name}</h1>
           <div className="h-[56px] flex justify-between">
             <div className="flex flex-row gap-2">
               <div>
-                <p className="my-1 text-base text-[#8F9CA9]">Creator </p>
-                <h4 className="my-0 ssm:text-sm text-transparent font-bold bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">
+                <p className="my-1 text-base second-color">Creator </p>
+                <h4 className="my-0 ssm:text-sm text-transparent font-bold main-color">
                   {truncateEthAddress(nft.owner)}
                 </h4>
               </div>
             </div>
             <div>
-              <p className="my-1 text-[#8F9CA9]">Current Price</p>
-              <h4 className="my-0 ">{nft.price} MATIC</h4>
+              <p className="my-1 second-color">Current Price</p>
+              <h4 className="my-0 main-color">{nft.price} MATIC</h4>
             </div>
           </div>
         </div>

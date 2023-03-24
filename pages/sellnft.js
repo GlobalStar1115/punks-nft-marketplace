@@ -94,26 +94,26 @@ const SellNft = () => {
                 className="w-full h-[450px]  rounded-2xl"
               />
             </div>
-            <div className="w-full h-full flex flex-col mt-3">
-              <label className="text-2xl my-1 font-semibold ">Price</label>
+            <div className="w-full h-full flex items-center justify-between sm:flex-col mt-3">
+              <span className="text-2xl font-semibold main-color mr-2">Price</span>
               <input
                 type="number"
                 placeholder="Input your price as you want to sell"
-                className="px-5 py-3 rounded-xl
-               placeholder:text-slate-400 outline-none border-none  bg-[#272D37]/60 placeholder: "
+                className="px-5 py-3 rounded-xl w-full main-color text-sm font-semibold
+               placeholder:text-slate-400 outline-none border-none  main-card-bg placeholder: "
                 value={formData.price}
                 onChange={(e) =>
                   setFormData({ ...formData, price: e.target.value })
                 }
               />
+              <button
+                className="main-btn-bg text-white text-lg main-family outline-none border-none py-2 px-5 ml-2 rounded-xl  cursor-pointer  w-[300px] sm:w-full sm:my-2"
+                onClick={sellToken}
+                disabled={btnLoading}
+              >
+                {btnLoading ? "Selling NFT" : "Sell NFT"}
+              </button>
             </div>
-            <button
-              className="bg-[#1E50FF] outline-none border-none py-3 px-5 rounded-xl  cursor-pointer  duration-250 ease-in-out hover:transform-x-1 hover:drop-shadow-xl hover:shadow-sky-600 w-full mt-8 transition transform hover:-translate-y-3 motion-reduce:transition-none motion-reduce:hover:transform-none "
-              onClick={sellToken}
-              disabled={btnLoading}
-            >
-              {btnLoading ? "Selling NFT" : "Sell NFT"}
-            </button>
           </div>
         </section>
         <Footer />

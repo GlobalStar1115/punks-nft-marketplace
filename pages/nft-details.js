@@ -76,11 +76,11 @@ const NFTDetails = () => {
       </Head>
 
       <Header />
-      <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full "></div>
+      <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full md:w-[300px]"></div>
       <div className="relative overflow-hidden">
         <section className="grid grid-cols-2 max-w-[1240px] mx-auto my-2 gap-4  sm:grid-cols-1 p-5">
           <div className="p-3 sm:p-0">
-            <div className="w-full h-[508px] border border-solid border-sky-500   rounded-xl ">
+            <div className="w-full h-[508px] border border-solid border-sky-500 md:h-full   rounded-xl ">
               <img
                 src={nft.image}
                 alt={nft.name}

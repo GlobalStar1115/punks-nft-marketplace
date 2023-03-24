@@ -47,22 +47,22 @@ const Header = () => {
           }
         >
           <h2 className="text-2xl ssm:text-[10px]">
-            <Link href="/">
+            <Link className="cursor-pointer" href="/">
               {/* <a>Mumbai Punks</a> */}
-              <img height="60px" src="logos/black_logo.svg" alt="logo" />
+              <img className="cursor-pointer" height="60px" src="logos/black_logo.svg" alt="logo" />
             </Link>
           </h2>
-          <ul className="flex gap-12 items-center justify-center transition-all list-none sm:hidden">
+          <ul className="flex gap-12 md:gap-10 items-center justify-center transition-all list-none sm:hidden">
             <li>
               <Link href="/dashboard">
                 <a
                   className={
                     currentRoute === "/dashboard"
-                      ? "text-gray-900 text-2xl font-medium"
-                      : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
+                      ? "text-gray-900 text-2xl md:text-lg font-medium"
+                      : "text-indigo-600 text-2xl md:text-lg font-normal hover:text-gray-900"
                   }
                 >
-                  Home
+                  Marketplace
                 </a>
               </Link>
             </li>
@@ -71,8 +71,8 @@ const Header = () => {
                 <a
                   className={
                     currentRoute === "/createnft"
-                      ? "text-gray-900 text-2xl font-medium"
-                      : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
+                      ? "text-gray-900 text-2xl md:text-lg font-medium"
+                      : "text-indigo-600 text-2xl md:text-lg font-normal hover:text-gray-900"
                   }
                 >
                   Create NFTs
@@ -84,8 +84,8 @@ const Header = () => {
                 <a
                   className={
                     currentRoute === "/profile"
-                      ? "text-gray-900 text-2xl font-medium"
-                      : "text-indigo-600 text-2xl font-normal hover:text-gray-900"
+                      ? "text-gray-900 text-2xl md:text-lg font-medium"
+                      : "text-indigo-600 text-2xl md:text-lg font-normal hover:text-gray-900"
                   }
                 >
                   Profile
@@ -99,7 +99,7 @@ const Header = () => {
           </p>
 
           <div className="hidden sm:block cursor-pointer" onClick={toggle}>
-            <HambergerMenu size="32" color="#d9e3f0" />
+            <HambergerMenu size="32" color="#4f46e5" />
           </div>
         </nav>
       </section>
@@ -118,19 +118,19 @@ const Header = () => {
             className="absolute top-[1.2rem] right-[1.2rem] bg-transparent  cursor-pointer text-center"
           />
 
-          <h2 className="text-2xl ">
+          <h2 className="text-4xl ">
             <Link href="/">
-              <a>Mumbai Punks</a>
+              <p className="text-white">Mumbai Punks</p>
             </Link>
           </h2>
-          <ul className="grid gap-3 grid-rows-3 items-center justify-center transition-all list-none nav_links text-lg">
+          <ul className="grid gap-10 grid-rows-3 items-center justify-center transition-all list-none nav_links text-lg">
             <li>
               <Link href="/dashboard">
                 <a
                   className={
                     currentRoute === "/dashboard"
-                      ? "text-white text-base font-medium"
-                      : "text-indigo-600 font-normal hover:text-white"
+                      ? "text-white text-2xl font-medium"
+                      : "text-white text-2xl font-normal hover:text-white"
                   }
                 >
                   Home
@@ -142,8 +142,8 @@ const Header = () => {
                 <a
                   className={
                     currentRoute === "/createnft"
-                      ? "text-white text-base font-medium"
-                      : "text-indigo-600 font-normal hover:text-white"
+                      ? "text-white text-2xl font-medium"
+                      : "text-white text-2xl font-normal hover:text-white"
                   }
                 >
                   Create NFTs
@@ -155,8 +155,8 @@ const Header = () => {
                 <a
                   className={
                     currentRoute === "/profile"
-                      ? "text-white text-base font-medium"
-                      : "text-indigo-600 font-normal hover:text-white"
+                      ? "text-white text-2xl font-medium"
+                      : "text-white text-2xl font-normal hover:text-white"
                   }
                 >
                   Profile
@@ -165,7 +165,7 @@ const Header = () => {
             </li>
           </ul>
 
-          <p className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-800 ">
+          <p className="font-semibold text-white ">
             {truncateEthAddress(addr)}
           </p>
         </div>

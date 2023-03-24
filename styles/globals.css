@@ -20,6 +20,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Acme', Arial, Helvetica, sans-serif;
+  /* overflow-x: hidden; */
 }
 
 a {

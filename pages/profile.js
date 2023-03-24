@@ -72,6 +72,13 @@ const Profile = () => {
     }
   };
 
+  if (!loading)
+    return (
+      <div className="w-full h-screen flex flex-col items-center justify-center ">
+        <img src="/punks.png" alt="punks" className="h-[160px] animate-bounce" />
+        <h2 className="text-5xl main-color font-semibold ">Loading...</h2>
+      </div>
+    );
 
 
   return (
@@ -82,33 +89,22 @@ const Profile = () => {
       </Head>
       <Header />
 
-      <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full "></div>
-
-      <div className="relative overflow-hidden">
-        <section className="">
-          <div className="max-w-[1400px] relative h-[280px] mx-auto my-0 bg-[#272D37]/60 rounded-2xl border-3 border-solid border-[#0039FF] sm:h-[150px] md:mx-2 ">
-            <div className="flex items-center justify-center w-full h-full">
-              <h1 className="  font-semibold text-5xl md:text-2xl">
-                My NFTs
-              </h1>
-            </div>
-
-            <div className="absolute w-[160px] h-[160px] sm:w-[80px] sm:h-[80px] bg-white left-10 -bottom-[80px] rounded-[45px] sm:rounded-3xl profile flex  sm:-bottom-[40px] items-center justify-center">
-              <img
-                src="punks.png"
-                alt="Punks"
-                className="w-[80px] h-[80px] sm:h-[60px] sm:w-[60px]"
-              />
-            </div>
-          </div>
-        </section>
-        <section className="max-w-[1200px] my-20 mx-auto grid grid-cols-3 md:grid-cols-2 gap-4   overflow-hidden top-7 md:gap-5 medium md:px-5 sm:grid-cols-1 sm:h-full relative justify-center items-center">
-          {nfts?.map((nft, i) => (
-            <MyNFTContainer key={nft.tokenId} nft={nft} />
-          ))}
-        </section>
-        <Footer />
-      </div>
+      <div className="bg-[#1242ef] absolute left-[-250px] top-[-210px] h-[352px] w-[652px] blur-[350px] rounded-full md:w-[300px]"></div>
+      {!nfts.length ? (
+        <div className="w-full h-50 flex flex-col items-center justify-center ">
+          <h2 className="text-6xl main-color font-semibold">No NFTs in Marketplace</h2>
+        </div>
+      ) : (
+        <div className="relative overflow-hidden">
+          <h1 className="text-center text-6xl main-color">My NFTs</h1>
+          <section className="max-w-[1200px] my-20 mx-auto grid grid-cols-3 md:grid-cols-2 gap-6 overflow-hidden top-7 md:gap-5 medium md:px-5 sm:grid-cols-1 sm:h-full relative justify-center items-center">
+            {nfts?.map((nft, i) => (
+              <MyNFTContainer key={nft.tokenId} nft={nft} />
+            ))}
+          </section>
+          <Footer />
+        </div>
+      )}
     </div>
   );
 };
